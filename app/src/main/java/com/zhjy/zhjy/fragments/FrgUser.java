@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.zhjy.zhjy.R;
+import com.zhjy.zhjy.activity.MyRoseActivity;
 import com.zhjy.zhjy.activity.PersonLikeActivity;
 import com.zhjy.zhjy.activity.UserDataSettingActivity;
 
@@ -44,6 +45,8 @@ public class FrgUser extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.re_rose:
+                Intent in_rose=new Intent(getActivity(), MyRoseActivity.class);
+                startActivity(in_rose);
                 break;
             case R.id.re_like:
                 Intent in_like=new Intent(getActivity(), PersonLikeActivity.class);

@@ -23,6 +23,7 @@
         <activity android:name=".activity.UserDataDetailActivity"/>
         <activity android:name=".activity.UserDataSettingActivity"/>
         <activity android:name=".activity.PersonLikeActivity"/>
+        <activity android:name=".activity.MyRoseActivity"/>
     </application>
 
 </manifest>
