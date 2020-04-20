@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/frg_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:id="@+id/tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_bottom_layout_bg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/tab_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/home_bottom_homepage_icon_selector"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:text="@string/main_txt_home"
+                android:textSize="10sp"
+                android:textColor="@drawable/main_bottom_tv_selector" />
+
+            <RadioButton
+                android:id="@+id/tab_discover"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/home_bottom_disvover_icon_selector"
+                android:layout_weight="1"
+                android:button="@null"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:text="@string/main_txt_discover"
+                android:textSize="10sp"
+                android:textColor="@drawable/main_bottom_tv_selector" />
+
+            <RadioButton
+                android:id="@+id/tab_info"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:button="@null"
+                android:drawableTop="@drawable/home_bottom_info_icon_selector"
+                android:gravity="center"
+                android:text="@string/main_txt_info"
+                android:textSize="10sp"
+                android:textColor="@drawable/main_bottom_tv_selector" />
+            <RadioButton
+                android:id="@+id/tab_user"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:button="@null"
+                android:drawableTop="@drawable/home_bottom_user_icon_selector"
+                android:gravity="center"
+                android:text="@string/main_txt_user"
+                android:textSize="10sp"
+                android:textColor="@drawable/main_bottom_tv_selector" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

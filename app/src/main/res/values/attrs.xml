@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    //自动换行添加控件的属性
+    <declare-styleable name="AntoLineUtil">
+        <attr name="horizontalSpacing" format="dimension"/>
+        <attr name="verticalSpacing" format="dimension"/>
+    </declare-styleable>
+    <!--弧形的界面属性-->
+    <declare-styleable name="ArcView">
+        <attr name="arcHeight" format="dimension"/>
+        <attr name="lgColor"   format="color"/>
+        <attr name="bgColor" format="color"/>
+    </declare-styleable>
+</resources>

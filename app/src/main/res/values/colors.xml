@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="transparent_bg">#00000000</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorRed">#DF2A2A</color>
+    <color name="colorBlue">#253AAD</color>
+
+
+    <color name="main_bottom_layout_bg">#ECEBEB</color>
+
+    <color name="main_bottom_tv_color_pressed">#d81e06</color>
+    <color name="main_bottom_tv_color_unpressed">#8a8a8a</color>
+    <color name="user_detail_tv_bg">#E4BD47</color>
+
+
+    <color name="comment_bg_color_gray">#E6E6E6</color>//通用的灰色背景
+</resources>
