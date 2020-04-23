@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.zhjy.zhjy.R;
 import com.zhjy.zhjy.activity.UserDataDetailActivity;
@@ -45,8 +46,9 @@ public class HomePageRecyAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         ((viewHolder) holder).homepage_item_tv_age.setText(mList.get(position).getAge()+"");
         ((viewHolder) holder).homepage_item_tv_location.setText(mList.get(position).getLocation());
         ((viewHolder) holder).homepage_item_tv_hometown.setText(mList.get(position).getHometown());
+//        ((viewHolder) holder).img_heard_pic.setImageResource(R.mipmap.one);
+        Glide.with(mContext).load(mList.get(position).getHeardpic_url()).error(R.mipmap.ic_launcher).into(((viewHolder) holder).img_heard_pic);
 
-        ((viewHolder) holder).img_heard_pic.setImageResource(R.mipmap.one);
     }
 
     @Override
@@ -61,7 +63,7 @@ public class HomePageRecyAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         RoundedImageView img_heard_pic;
         Context mContext;
         List<User> mList;
-        public viewHolder(View itemView,List<User> mList,Context mContext) {
+        public viewHolder(View itemView, List<User> mList, Context mContext) {
             super(itemView);
             this.mContext=mContext;
             this.mList=mList;

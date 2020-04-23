@@ -9,13 +9,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.zhjy.zhjy.MainActivity;
 import com.zhjy.zhjy.R;
-import com.zhjy.zhjy.ustils.SystemUtil;
+import com.zhjy.zhjy.utils.SystemUtil;
 
 public class FlashActivity extends AppCompatActivity {
     //停留的时长
-    private static final long DELAY_TIME = 3000;
+    private static final long DELAY_TIME = 1000;
 
-    private Boolean isLogin=true;//用户之前是否已经登录
+    private Boolean isLogin=false;//用户之前是否已经登录
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

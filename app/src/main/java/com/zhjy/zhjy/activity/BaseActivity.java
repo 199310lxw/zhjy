@@ -6,7 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.zhjy.zhjy.R;
-import com.zhjy.zhjy.ustils.SystemUtil;
+import com.zhjy.zhjy.utils.SystemUtil;
 
 public class BaseActivity extends AppCompatActivity {
     @Override

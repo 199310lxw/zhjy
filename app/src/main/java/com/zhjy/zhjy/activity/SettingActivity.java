@@ -10,15 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.zhjy.zhjy.R;
 import com.zhjy.zhjy.utils.SystemUtil;
 
-public class UserDataSettingActivity extends AppCompatActivity implements View.OnClickListener {
+public class SettingActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView img_back;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_data_setting);
+        setContentView(R.layout.activity_setting);
         SystemUtil.initSystemBarTint(this, getResources().getColor(R.color.transparent_bg));
         SystemUtil.setAndroidNativeLightStatusBar(this, true);//状态栏字体颜色,true为黑色，false为白色
-
         initView();
     }
     private void initView(){

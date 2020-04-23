@@ -12,6 +12,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <ImageView
+                android:id="@+id/img_heardpic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/one"
@@ -339,7 +340,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="#C92626"
-            android:text="私聊"
+            android:text="加微信"
             android:gravity="center"
             android:textSize="16sp"
             android:textColor="#ffffff"/>

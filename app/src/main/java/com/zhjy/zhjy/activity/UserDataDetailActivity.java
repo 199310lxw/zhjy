@@ -2,7 +2,6 @@ package com.zhjy.zhjy.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,14 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import com.yanzhenjie.nohttp.NoHttp;
-import com.yanzhenjie.nohttp.RequestMethod;
-import com.yanzhenjie.nohttp.error.NetworkError;
-import com.yanzhenjie.nohttp.rest.OnResponseListener;
-import com.yanzhenjie.nohttp.rest.Request;
-import com.yanzhenjie.nohttp.rest.RequestQueue;
-import com.yanzhenjie.nohttp.rest.Response;
-import com.zhjy.zhjy.Constant.HttpConstant;
+import com.bumptech.glide.Glide;
 import com.zhjy.zhjy.R;
 import com.zhjy.zhjy.views.AntoLineUtil;
 
@@ -27,6 +19,8 @@ public class UserDataDetailActivity extends BaseActivity implements View.OnClick
     private static final String TAG="UserDataDetailActivity";
     private ImageView img_back;
     private ImageView img_collect;
+
+    private ImageView img_heardpic;
     private TextView tv_connect;
 
     private TextView tv_age,tv_location,tv_hometown,tv_ismarried,tv_height,tv_weight,tv_work,tv_salary;
@@ -38,7 +32,7 @@ public class UserDataDetailActivity extends BaseActivity implements View.OnClick
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_data_detail);
+        setContentView(R.layout.activity_user_data_detail);
         initView();
     }
 
@@ -49,6 +43,8 @@ public class UserDataDetailActivity extends BaseActivity implements View.OnClick
         img_back.setOnClickListener(this);
         img_collect.setOnClickListener(this);
         tv_connect.setOnClickListener(this);
+
+        img_heardpic=findViewById(R.id.img_heardpic);
 
         tv_age=findViewById(R.id.tv_age);
         tv_location=findViewById(R.id.tv_location);
@@ -77,6 +73,7 @@ public class UserDataDetailActivity extends BaseActivity implements View.OnClick
         tv_weight.setText(intent.getIntExtra("weight",0)+"");
         tv_work.setText(intent.getStringExtra("work"));
         tv_salary.setText(intent.getStringExtra("salary"));
+        Glide.with(this).load(intent.getStringExtra("heardpic_url")).error(R.mipmap.ic_launcher).into(img_heardpic);
     }
     //添加交友条件
      private void addView(){
@@ -111,44 +108,8 @@ public class UserDataDetailActivity extends BaseActivity implements View.OnClick
              conditionGroup.addView(view);
          }
 
-     }    private void sendSms(String mobilephome) {
-        String url = new HttpConstant().SmsUrl;
-        Request<String> request = NoHttp.createStringRequest(url, RequestMethod.POST);
-        request.add("account", new HttpConstant().APIID)
-                .add("password", new HttpConstant().APIKEY)
-                .add("mobile", mobilephome)
-                .add("content", "您的验证码是：【变量】。请不要把验证码泄露给其他人");
+     }
 
-        RequestQueue queue = NoHttp.newRequestQueue();
-
-        queue.add(0, request, new OnResponseListener<String>(){
-
-            @Override
-            public void onSucceed(int what, Response<String> response) {
-                if(response.responseCode() == 200) {// 请求成功。
-                    String result = response.get();
-                    Log.e("TAG",result+"================");
-                }
-            }
-
-            @Override
-            public void onFailed(int what, Response<String> response) {
-                Log.e("TAG","请求错误："+response.responseCode());
-                // 这里还有很多错误类型，可以看demo：https://github.com/yanzhenjie/NoHttp
-            }
-
-            @Override
-            public void onStart(int what) {
-                // 这里可以show()一个wait dialog。
-            }
-
-            @Override
-            public void onFinish(int what) {
-                // 这里可以dismiss()上面show()的wait dialog。
-            }
-        });
-
-    }
 
     @Override
     public void onClick(View view) {
@@ -166,7 +127,7 @@ public class UserDataDetailActivity extends BaseActivity implements View.OnClick
                  }
                 break;
             case R.id. tv_connect:
-                sendSms("13682377116");
+
                 break;
         }
     }

@@ -1,4 +1,4 @@
-package com.zhjy.zhjy.ustils;
+package com.zhjy.zhjy.utils;
 
 import android.os.Bundle;
 

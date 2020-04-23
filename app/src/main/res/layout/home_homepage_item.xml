@@ -15,6 +15,7 @@
             android:src="@mipmap/ic_launcher"
             android:layout_margin="8dp"
             app:riv_border_color="#C44646"
+            android:scaleType="fitXY"
             app:riv_border_width="1px"
             app:riv_corner_radius="14dp"
             app:riv_oval="false" />

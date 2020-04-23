@@ -9,6 +9,7 @@
     <color name="colorWhite">#ffffff</color>
     <color name="colorRed">#DF2A2A</color>
     <color name="colorBlue">#253AAD</color>
+    <color name="colorBlack">#000000</color>
 
 
     <color name="main_bottom_layout_bg">#ECEBEB</color>

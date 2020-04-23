@@ -1,7 +1,12 @@
 package com.zhjy.zhjy.Constant;
 
 public class HttpConstant {
-    public  final String SmsUrl="https://106.ihuyi.com/webservice/sms.php?method=Submit";
-    public final String APIID="C33937058";
-    public final String APIKEY="5d3198ecea5a4e72539cae460f0e1cc7";
+
+    //测试地址
+    public final String url_path="http://192.168.1.6:80/zhjy/homepage/users.php";
+    public final String ACTION_LOGIN="login";
+    public final String ACTION_REGISTER="register";
+    public final String ACTION_SHOWALL="showAll";
+
+    public final int COMMENT_PAGE_SIZE=10;//用户每页显示条数
 }

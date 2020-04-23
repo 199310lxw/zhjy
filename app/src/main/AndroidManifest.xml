@@ -24,6 +24,10 @@
         <activity android:name=".activity.UserDataSettingActivity"/>
         <activity android:name=".activity.PersonLikeActivity"/>
         <activity android:name=".activity.MyRoseActivity"/>
+        <activity android:name=".activity.WechatCodeActivity"/>
+        <activity android:name=".activity.SettingActivity"/>
+        <activity android:name=".activity.ShareActivity"/>
+        <activity android:name=".activity.TrendsActivity"/>
     </application>
 
 </manifest>

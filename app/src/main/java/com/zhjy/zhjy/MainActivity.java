@@ -3,11 +3,7 @@ package com.zhjy.zhjy;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
-import android.view.WindowManager;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -16,8 +12,7 @@ import com.zhjy.zhjy.fragments.FrgDiscover;
 import com.zhjy.zhjy.fragments.FrgHome;
 import com.zhjy.zhjy.fragments.FrgInfo;
 import com.zhjy.zhjy.fragments.FrgUser;
-import com.zhjy.zhjy.ustils.FragmentUtil;
-import com.zhjy.zhjy.ustils.SystemUtil;
+import com.zhjy.zhjy.utils.FragmentUtil;
 
 import java.util.ArrayList;
 import java.util.List;
