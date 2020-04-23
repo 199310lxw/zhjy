@@ -1,6 +1,9 @@
 package com.zhjy.zhjy.activity;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -22,6 +25,8 @@ public class FlashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_flash);
         SystemUtil.initSystemBarTint(this, getResources().getColor(R.color.transparent_bg));
         SystemUtil.setAndroidNativeLightStatusBar(this, false);
+        SharedPreferences share=getSharedPreferences("zhjy", Context.MODE_PRIVATE);
+        isLogin=share.getBoolean("isLogin",false);
 
         new Handler().postDelayed(new Runnable() {
             @Override

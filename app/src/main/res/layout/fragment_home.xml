@@ -37,6 +37,7 @@
             android:overScrollMode="never" />
 
         <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:id="@+id/footer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srlClassicsSpinnerStyle="Translate" />

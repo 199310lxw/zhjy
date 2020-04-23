@@ -16,7 +16,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:arcHeight="@dimen/size_dp_38"
-                app:bgColor="#1B776E" />
+                app:bgColor="#23857B" />
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">

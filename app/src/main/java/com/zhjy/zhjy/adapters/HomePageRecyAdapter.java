@@ -84,7 +84,7 @@ public class HomePageRecyAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             in_show.putExtra("age",mList.get(position).getAge());
             in_show.putExtra("location",mList.get(position).getLocation());
             in_show.putExtra("hometown",mList.get(position).getHometown());
-            in_show.putExtra("ismarried",mList.get(position).isIsmarried());
+            in_show.putExtra("ismarried",mList.get(position).getIsmarried());
             in_show.putExtra("height",mList.get(position).getHeight());
             in_show.putExtra("weight",mList.get(position).getWeight());
             in_show.putExtra("work",mList.get(position).getWork());

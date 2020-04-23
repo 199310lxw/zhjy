@@ -64,7 +64,7 @@ public class UserDataDetailActivity extends BaseActivity implements View.OnClick
         tv_age.setText(intent.getIntExtra("age",0)+"");
         tv_location.setText(intent.getStringExtra("location"));
         tv_hometown.setText(intent.getStringExtra("hometown"));
-        if(intent.getBooleanExtra("ismarried",false)){
+        if(intent.getIntExtra("ismarried",0)==1){
             tv_ismarried.setText("已婚");
         }else{
             tv_ismarried.setText("未婚");

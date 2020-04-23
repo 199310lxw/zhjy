@@ -27,7 +27,7 @@ public class ParseUserUtil {
                 user.setLocation(response.getDatas().get(i).getLocation());
                 user.setHometown(response.getDatas().get(i).getHometown());
                 user.setPhone(response.getDatas().get(i).getPhone());
-                user.setIsmarried(response.getDatas().get(i).isIsmarried());
+                user.setIsmarried(response.getDatas().get(i).getIsmarried());
                 user.setHeight(response.getDatas().get(i).getHeight());
                 user.setWeight(response.getDatas().get(i).getWeight());
                 user.setWork(response.getDatas().get(i).getWork());

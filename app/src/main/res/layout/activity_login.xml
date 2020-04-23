@@ -1,15 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ImageView
-        android:id="@+id/bg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@mipmap/bg_login"/>
+    android:layout_height="match_parent"
+    android:background="@drawable/login_change_bg">
+<!--    <ImageView-->
+<!--        android:id="@+id/bg"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:src="@mipmap/bg_login"/>-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical">
+        <com.zhjy.zhjy.views.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="160dp"
+            android:src="@mipmap/one"/>
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="84dp"
+            android:background="@drawable/corner_login_phone"
+            android:layout_gravity="center">
+           <ImageView
+               android:id="@+id/icon_phone"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:src="@mipmap/phone_white"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="4dp"/>
+               <EditText
+                   android:id="@+id/edit_phone"
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:hint="请输入手机号"
+                   android:autofillHints="@string/main_txt_discover"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="8dp"
+                   android:layout_toRightOf="@+id/icon_phone"
+                   android:textColorHint="#B3B0B0"
+                   android:phoneNumber="true"
+                   android:singleLine="true"
+                   android:textColor="#ffffff"
+                   android:textSize="16sp"
+                   android:background="@null"/>
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="240dp"
+            android:layout_height="42dp"
+            android:text="下一步"
+            android:textSize="16sp"
+            android:background="@drawable/login_btn_selector"
+            android:layout_marginTop="60dp"
+            android:textColor="@drawable/login_btn_txt_selector"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
 </FrameLayout>

@@ -7,7 +7,7 @@ public class User {
     private String  location;   // 城市
     private String hometown;     //老家
     private String heardpic_url; //头像地址
-    private boolean ismarried;   // 婚否
+    private int ismarried;   // 婚否
     private int height;          //身高
     private int weight;          //体重
     private String work;         //职业
@@ -61,11 +61,11 @@ public class User {
         this.heardpic_url = heardpic_url;
     }
 
-    public boolean isIsmarried() {
+    public int getIsmarried() {
         return ismarried;
     }
 
-    public void setIsmarried(boolean ismarried) {
+    public void setIsmarried(int ismarried) {
         this.ismarried = ismarried;
     }
 

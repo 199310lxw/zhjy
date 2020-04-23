@@ -18,8 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".activity.LoginActivity"/>
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".activity.LoginActivity"
+            android:launchMode="singleTop"/>
         <activity android:name=".activity.UserDataDetailActivity"/>
         <activity android:name=".activity.UserDataSettingActivity"/>
         <activity android:name=".activity.PersonLikeActivity"/>
@@ -28,6 +30,8 @@
         <activity android:name=".activity.SettingActivity"/>
         <activity android:name=".activity.ShareActivity"/>
         <activity android:name=".activity.TrendsActivity"/>
+        <activity android:name=".activity.PsdActivity"/>
+        <activity android:name=".activity.RegisterActivity"/>
     </application>
 
 </manifest>
