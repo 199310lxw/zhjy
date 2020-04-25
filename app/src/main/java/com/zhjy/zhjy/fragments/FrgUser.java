@@ -1,16 +1,20 @@
 package com.zhjy.zhjy.fragments;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
 import com.zhjy.zhjy.R;
 import com.zhjy.zhjy.activity.MyRoseActivity;
 import com.zhjy.zhjy.activity.PersonLikeActivity;
@@ -19,8 +23,13 @@ import com.zhjy.zhjy.activity.ShareActivity;
 import com.zhjy.zhjy.activity.TrendsActivity;
 import com.zhjy.zhjy.activity.UserDataSettingActivity;
 import com.zhjy.zhjy.activity.WechatCodeActivity;
+import com.zhjy.zhjy.views.CircleImageView;
 
 public class FrgUser extends Fragment implements View.OnClickListener {
+
+    private CircleImageView user_img_heardpic;
+    private TextView tv_nickname;
+
     private RelativeLayout re_info;
     private RelativeLayout re_like;
     private RelativeLayout re_rose;
@@ -29,6 +38,10 @@ public class FrgUser extends Fragment implements View.OnClickListener {
     private RelativeLayout re_wechat_code;
     private RelativeLayout re_setting;
     private RelativeLayout re_share;
+
+    private String heardpic_url;
+    private String nickname;
+    private String phone;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,10 +50,18 @@ public class FrgUser extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = View.inflate(getActivity(), R.layout.fragment_user, null);
+        SharedPreferences share=getActivity().getSharedPreferences("zhjy", Context.MODE_PRIVATE);
+        heardpic_url=share.getString("user_heardpic_url","");
+        phone=share.getString("user_phone","");
+        nickname=share.getString("user_nickname","");
         initView(view);
         return view;
     }
     private void initView(View view){
+        user_img_heardpic=view.findViewById(R.id.user_img_heardpic);
+        tv_nickname=view.findViewById(R.id.tv_nickname);
+        Glide.with(getActivity()).load(heardpic_url).error(R.mipmap.ic_launcher).into(user_img_heardpic);
+        tv_nickname.setText(nickname);
         re_rose=view.findViewById(R.id.re_rose);
         re_like=view.findViewById(R.id.re_like);
         re_info=view.findViewById(R.id.re_info);

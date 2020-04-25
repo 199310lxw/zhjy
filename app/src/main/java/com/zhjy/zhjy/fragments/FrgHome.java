@@ -30,7 +30,7 @@ import com.zhjy.zhjy.Constant.HttpConstant;
 import com.zhjy.zhjy.R;
 import com.zhjy.zhjy.adapters.HomePageRecyAdapter;
 import com.zhjy.zhjy.beans.User;
-import com.zhjy.zhjy.utils.ParseUserUtil;
+import com.zhjy.zhjy.utils.ParseUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,14 +60,14 @@ public class FrgHome extends Fragment {
                     Log.e(TAG,"what==1");
                     list_user.clear();
 //                   lists=(List<User>) msg.obj;
-                    lists_temp= new ParseUserUtil().parsejson(msg.obj.toString());
+                    lists_temp= new ParseUtil().parseUserjson(msg.obj.toString());
                     list_user=lists_temp;
                     initRv(view);
             }else if(msg.what==2){
                 Log.e(TAG,"whate==2");
 //                List<User> lists=new ArrayList<>();
 //                lists=(List<User>) msg.obj;
-                lists_temp= new ParseUserUtil().parsejson(msg.obj.toString());
+                lists_temp= new ParseUtil().parseUserjson(msg.obj.toString());
                 for(int i=0;i<lists_temp.size();i++){
                     User user=new User();
                     user.setNickname(lists_temp.get(i).getNickname());
@@ -152,7 +152,7 @@ public class FrgHome extends Fragment {
      * @param action
      */
     private void getUserData(String action,int page,int pagesize,final int what){
-        String url = new HttpConstant().url_path;
+        String url = new HttpConstant().url_path+"/users.php";
         final Request<String> request = NoHttp.createStringRequest(url, RequestMethod.POST);
         request.add("action", action);
         request.add("page", page);

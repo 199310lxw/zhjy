@@ -15,7 +15,7 @@ public class TrendsActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trends);
+        setContentView(R.layout.activity_user_trends);
         SystemUtil.initSystemBarTint(this, getResources().getColor(R.color.transparent_bg));
         SystemUtil.setAndroidNativeLightStatusBar(this, true);//状态栏字体颜色,true为黑色，false为白色
         initView();

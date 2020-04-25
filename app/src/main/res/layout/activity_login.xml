@@ -38,6 +38,7 @@
                    android:layout_height="50dp"
                    android:hint="请输入手机号"
                    android:autofillHints="@string/main_txt_discover"
+                   android:textCursorDrawable="@color/colorWhite"
                    android:layout_centerVertical="true"
                    android:layout_marginLeft="8dp"
                    android:layout_toRightOf="@+id/icon_phone"

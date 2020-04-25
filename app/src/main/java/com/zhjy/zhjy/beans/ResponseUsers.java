@@ -2,7 +2,7 @@ package com.zhjy.zhjy.beans;
 
 import java.util.List;
 
-public class Response {
+public class ResponseUsers {
     private int code;
     private String message;
     private List<User> datas;

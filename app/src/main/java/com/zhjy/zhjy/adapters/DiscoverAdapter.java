@@ -12,17 +12,19 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.zhjy.zhjy.R;
 import com.zhjy.zhjy.activity.UserDataDetailActivity;
+import com.zhjy.zhjy.beans.Treads;
 import com.zhjy.zhjy.views.CircleImageView;
 
 import java.util.List;
 
 public class DiscoverAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
     private Context mContext;
-    private List<String> mList;
-    public DiscoverAdapter(Context mContext, List<String> mList){
+    private List<Treads> mList;
+    public DiscoverAdapter(Context mContext, List<Treads> mList){
         this.mContext=mContext;
         this.mList=mList;
     }
@@ -43,7 +45,13 @@ public class DiscoverAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        ((viewHolder) holder).dicover_recycler_item_title.setText(mList.get(position));
+        ((viewHolder) holder).discover_item_tv_nickname.setText(mList.get(position).getNickname());
+        ((viewHolder) holder).discover_item_tv_age.setText(mList.get(position).getAge()+"");
+        ((viewHolder) holder).discover_item_tv_location.setText(mList.get(position).getLocation());
+        ((viewHolder) holder).discover_item_tv_hometown.setText(mList.get(position).getHometown());
+        ((viewHolder) holder).discover_item_tv_content.setText("\t\t\t"+mList.get(position).getContent());
+        ((viewHolder) holder).discover_item_tv_time.setText("\t\t\t"+mList.get(position).getDate_time());
+        Glide.with(mContext).load(mList.get(position).getTreads_picture_url()).error(R.mipmap.ic_launcher).into(((viewHolder) holder).discover_item_img_treadspic);
     }
 
     @Override
@@ -51,14 +59,27 @@ public class DiscoverAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         return mList.size()>0?mList.size():0;
     }
     public static  class viewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView  dicover_recycler_item_title;
-        RoundedImageView img_heardpic;
+         CircleImageView img_heardpic;
+        TextView  discover_item_tv_nickname;
+        TextView discover_item_tv_age;
+        TextView discover_item_tv_location;
+        TextView discover_item_tv_hometown;
+        TextView discover_item_tv_content;
+        ImageView discover_item_img_treadspic;
+        TextView discover_item_tv_time;
         Context mContext;
 
         public viewHolder(View itemView,Context mContext) {
             super(itemView);
             this.mContext=mContext;
-            dicover_recycler_item_title=itemView.findViewById(R.id.dicover_recycler_item_title);
+            discover_item_tv_nickname=itemView.findViewById(R.id.discover_recycler_item_title);
+            discover_item_tv_age=itemView.findViewById(R.id.discover_item_tv_age);
+            discover_item_tv_location=itemView.findViewById(R.id.discover_item_tv_location);
+            discover_item_tv_hometown=itemView.findViewById(R.id.discover_item_tv_hometown);
+            discover_item_tv_content=itemView.findViewById(R.id.discover_item_tv_content);
+            discover_item_img_treadspic=itemView.findViewById(R.id.discover_item_img_treadspic);
+            discover_item_tv_time=itemView.findViewById(R.id.discover_item_tv_time);
+
             img_heardpic=itemView.findViewById(R.id.img_heardpic);
             itemView.setOnClickListener(this);
             img_heardpic.setOnClickListener(this);

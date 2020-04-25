@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <com.zhjy.zhjy.views.CircleImageView
-                    android:id="@+id/ig_heardpic"
+                    android:id="@+id/user_img_heardpic"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_centerInParent="true"
@@ -30,7 +30,7 @@
                     android:id="@+id/tv_nickname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/ig_heardpic"
+                    android:layout_below="@+id/user_img_heardpic"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/size_dp_8"
                     android:textSize="14sp"
